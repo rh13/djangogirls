@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Post Details</h2>
+
+ 	<div class="post">
+ 		
+	<div class="date">
+	 <p>Author: {{post.author}},  Published: {{post.published_date}}
+	 <a class="btn btn-default" href="{% url 'edit_post' post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></p>
+	</div>
+	<h2>{{post.title}}</h2>
+	<p>{{post.description}}</p>
+	</div>
+{% endblock %}

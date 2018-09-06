@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<a class="btn btn-default" href="{% url 'new_post' %}">new_post</a>
+{% for post in posts %}
+ <div class="post">
+<h2><a href="{% url 'post_details' post.pk %}">{{post.title}}</a></h2>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+
+
+
